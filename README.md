@@ -1,3 +1,10 @@
+# New: React Helpdesk Workbench
+
+A redesigned React interface is available in [`web/`](web/README.md), including
+its standalone API server and Python/LangChain bridge. It supports ticket queues,
+batch processing, analysis details and persistent editable response drafts.
+See the linked setup guide. The original Streamlit app and CLI below are preserved.
+
 # AI Support Ticket Automation
 
 A beginner-friendly LangChain project that processes customer support tickets through a clear multi-stage workflow.

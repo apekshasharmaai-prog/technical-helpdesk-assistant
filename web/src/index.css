@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --font-sans: var(--app-font-sans);
+  --font-mono: var(--app-font-mono);
+  --radius-lg: var(--radius);
+}
+
+:root {
+  color-scheme: light;
+  --background: 150 24% 96%;
+  --foreground: 190 34% 16%;
+  --border: 162 19% 88%;
+  --input: 162 19% 88%;
+  --card: 0 0% 100%;
+  --card-foreground: 190 34% 16%;
+  --primary: 173 70% 29%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 158 38% 92%;
+  --secondary-foreground: 173 55% 24%;
+  --muted: 150 18% 93%;
+  --muted-foreground: 183 12% 46%;
+  --accent: 158 38% 92%;
+  --accent-foreground: 173 55% 24%;
+  --destructive: 10 41% 56%;
+  --destructive-foreground: 0 0% 100%;
+  --ring: 173 48% 46%;
+  --app-font-sans: "DM Sans", sans-serif;
+  --app-font-mono: "DM Mono", monospace;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: 190 28% 11%;
+  --foreground: 150 24% 93%;
+  --border: 190 20% 25%;
+  --input: 190 20% 25%;
+  --card: 190 25% 14%;
+  --card-foreground: 150 24% 93%;
+  --primary: 173 48% 48%;
+  --primary-foreground: 190 34% 12%;
+  --secondary: 190 19% 22%;
+  --secondary-foreground: 150 24% 93%;
+  --muted: 190 19% 20%;
+  --muted-foreground: 183 12% 68%;
+  --accent: 190 19% 22%;
+  --accent-foreground: 150 24% 93%;
+  --destructive: 10 45% 59%;
+  --destructive-foreground: 0 0% 100%;
+  --ring: 173 48% 54%;
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { min-height: 100%; }
+  body {
+    min-height: 100dvh;
+    margin: 0;
+    @apply bg-background text-foreground antialiased;
+  }
+  button, input, textarea { font: inherit; }
+}
